@@ -31,80 +31,55 @@ function my_acf_init()
 }
 add_action('acf/init', 'my_acf_init');
 
-function create_post_occasions()
+function create_post_chiens()
 {
-  register_post_type('occasions', [
+  register_post_type('Chiens', [
     'labels'            => [
-      'name'          => __('Occasions'),
-      'singular_name' => __('Occasions'),
-      'add_new_item'  => ('Ajouter une nouvelle occasion'),
-      'edit_item'     => __('Modifier une occasion'),
-      'search_item'   => __('Rechercher une occasion'),
-      'all_items'     => __('Toutes les occasions'),
-      'view_items'    => __('Voir les occasions'),
-      'view_item'     => __('Voir l\'occasion'),
+      'name'          => __('Chiens'),
+      'singular_name' => __('Chiens'),
+      'add_new_item'  => ('Ajouter un nouveau chien'),
+      'edit_item'     => __('Modifier un chien'),
+      'search_item'   => __('Rechercher un chien'),
+      'all_items'     => __('Tout les chiens'),
+      'view_items'    => __('Voir les chiens'),
+      'view_item'     => __('Voir le chien'),
     ],
     'public'            => true,
     'has_archive'       => true,
-    'rewrite'           => ['slug' => 'occasions'],
+    'rewrite'           => ['slug' => 'chiens'],
     'capability_type'   => 'page',
-    'menu_icon'         => 'dashicons-admin-network',
+    'menu_icon'         => 'dashicons-plus',
     'supports'          => ['title', 'thumbnail'],
     'show_in_menu'      => true,
     'show_in_nav_menus' => true,
   ]);
 }
-add_action('init', 'create_post_occasions');
+add_action('init', 'create_post_chiens');
 
-function create_post_marques()
+function create_post_chats()
 {
-  register_post_type('marques', [
+  register_post_type('Chats', [
     'labels'            => [
-      'name'          => __('Marques'),
-      'singular_name' => __('Marques'),
-      'add_new_item'  => ('Ajouter une nouvelle marque'),
-      'edit_item'     => __('Modifier une marque'),
-      'search_item'   => __('Rechercher une marque'),
-      'all_items'     => __('Toutes les marques'),
-      'view_items'    => __('Voir les marques'),
-      'view_item'     => __('Voir la marque'),
+      'name'          => __('Chats'),
+      'singular_name' => __('Chats'),
+      'add_new_item'  => ('Ajouter un nouveau chat'),
+      'edit_item'     => __('Modifier un chat'),
+      'search_item'   => __('Rechercher un chat'),
+      'all_items'     => __('Tout les chats'),
+      'view_items'    => __('Voir les chats'),
+      'view_item'     => __('Voir le chat'),
     ],
     'public'            => true,
     'has_archive'       => true,
-    'rewrite'           => ['slug' => 'marques'],
+    'rewrite'           => ['slug' => 'chats'],
     'capability_type'   => 'page',
-    'menu_icon'         => 'dashicons-images-alt2',
+    'menu_icon'         => 'dashicons-plus',
     'supports'          => ['title', 'thumbnail'],
     'show_in_menu'      => true,
     'show_in_nav_menus' => true,
   ]);
 }
-add_action('init', 'create_post_marques');
-
-function create_post_prestations()
-{
-  register_post_type('prestations', [
-    'labels'            => [
-      'name'          => __('Prestations'),
-      'singular_name' => __('Prestations'),
-      'add_new_item'  => ('Ajouter une nouvelle prestation'),
-      'edit_item'     => __('Modifier une prestation'),
-      'search_item'   => __('Rechercher une prestation'),
-      'all_items'     => __('Toutes les prestations'),
-      'view_items'    => __('Voir les prestations'),
-      'view_item'     => __('Voir la prestation'),
-    ],
-    'public'            => true,
-    'has_archive'       => true,
-    'rewrite'           => ['slug' => 'prestations'],
-    'capability_type'   => 'page',
-    'menu_icon'         => 'dashicons-admin-tools',
-    'supports'          => ['title', 'thumbnail'],
-    'show_in_menu'      => true,
-    'show_in_nav_menus' => true,
-  ]);
-}
-add_action('init', 'create_post_prestations');
+add_action('init', 'create_post_chats');
 
 function create_post_block()
 {
@@ -171,6 +146,7 @@ function remove_menus()
     remove_menu_page('tools.php');
     remove_menu_page('options-general.php');
     remove_menu_page('wpcf7');
+    remove_menu_page('wpcf7');
   }
   remove_menu_page('jetpack');
   remove_menu_page('edit.php');
@@ -207,13 +183,6 @@ function my_footer_shh()
 }
 add_action('admin_menu', 'my_footer_shh');
 
-// Change footer links
-function change_footer_admin()
-{
-  echo 'Merci de faire confiance à <a href="https://wehub.fr" target="_blank">Wehub</a> | <a href="https://wehub.fr/contact" target="_blank">Signaler un bug </a>';
-}
-add_filter('admin_footer_text', 'change_footer_admin');
-
 // Remove Screen options
 function remove_screen_options($display_boolean, $wp_screen_object)
 {
@@ -227,7 +196,7 @@ function remove_screen_options($display_boolean, $wp_screen_object)
     return true;
   }
 }
-// add_filter('screen_options_show_screen', 'remove_screen_options', 10, 2 );
+add_filter('screen_options_show_screen', 'remove_screen_options', 10, 2 );
 
 // Remove help option
 function remove_help_tabs($old_help, $screen_id, $screen)
@@ -236,19 +205,3 @@ function remove_help_tabs($old_help, $screen_id, $screen)
   return $old_help;
 }
 add_filter('contextual_help', 'remove_help_tabs', 999, 3);
-
-// Change link logo
-function custom_loginlogo_url($url)
-{
-  return 'https://wehub.fr/';
-}
-add_filter('login_headerurl', 'custom_loginlogo_url');
-
-// Add styles and scripts
-function my_admin_theme_style()
-{
-  wp_enqueue_style('wehub-theme', 'https://dist.wehub.fr/wp/style-wp-admin.css');
-  wp_enqueue_script('wehub-theme', 'https://dist.wehub.fr/wp/scripts-wp-admin.js');
-}
-add_action('admin_enqueue_scripts', 'my_admin_theme_style');
-add_action('login_enqueue_scripts', 'my_admin_theme_style');

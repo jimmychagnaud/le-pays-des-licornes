@@ -1,15 +1,15 @@
 <?php
 /**
- * @package Autelis
- * @since Autelis 1.0
+ * @package Le pays des licornes
+ * @since Le pays des licornes 1.0
  */
   $args = ['post_type' => 'block'];
   $loop = new WP_Query($args);
 
   if ($loop->have_posts()) {
       while($loop->have_posts()) : $loop->the_post();
-      $footerHoraires = get_field('footerHoraires');
-      $footerPaiement = get_field('footerPaiement');
+      $footerHoraires = get_field('horaires');
+      $footerPaiement = get_field('paiement');
       endwhile;
   }
 ?>
@@ -36,7 +36,7 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<h2 style="color: #FFF;">Suivez nous</h2>
+					<h2>Suivez moi</h2>
 					<a href="https://www.facebook.com/autelisfrance/">
 						<img class="bottomIcon" src="<?php echo get_template_directory_uri() ?>/img/facebook.svg" alt="facebook autelis">
 					</a>
@@ -47,7 +47,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<div class="container text-center">
-				<p>© Autelis Services -Tous droits réservés -<a href="/mentions-legales"> Mentions légales</a></p>
+				<p>© Le royaume des licornes -Tous droits réservés -<a href="/mentions-legales"> Mentions légales</a></p>
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer -->

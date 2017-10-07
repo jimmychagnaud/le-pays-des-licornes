@@ -28,7 +28,7 @@
       float: left;
       .bottomIcon {
         height: 50px;
-        fill: #fff;
+        fill: $primary-color;
       }
       @media (max-width: $screen-md-max) {
         float: none;
@@ -44,7 +44,8 @@
 }
 
 .site-footer {
-  background-color: $gray;
+  background-color: $primary-color;
+  color: $gray-dark;
   .site-info {
     height: 25px;
     p {

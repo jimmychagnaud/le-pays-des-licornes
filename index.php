@@ -1,12 +1,13 @@
 <?php
 /**
- * @package Autelis
- * @since Autelis 1.0
+ * @package Le pays des licornes
+ * @since Le pays des licornes 1.0
  * Template Name: Accueil
  */
 
 get_header();
 ?>
+<div class="header" style="background-image: url('<?php echo get_template_directory_uri() ?>/img/bg1.jpg');"></div>
 <?php $prestaChoices = get_field('servicesChoice');
 			if ($prestaChoices): ?>
 	<div class="customPost">

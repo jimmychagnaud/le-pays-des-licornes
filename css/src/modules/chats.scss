@@ -1,8 +1,8 @@
-.occasionArchive {
+.chatArchive {
   margin-top: 75px;
   margin-bottom: 75px;
   text-align: center;
-  .colArchiveOccasion {
+  .colArchiveChat {
     margin-top: 20px;
     float: none;
     display: inline-block;
@@ -10,17 +10,17 @@
     min-height: 330px;
     margin: 15px;
     padding: 0;
-    border: solid 1px #eee;
+    border: solid 1px $gray-dark;
     overflow: hidden;
     &:hover {
       border: solid 1px $gray;
-      .imageOccasion {
+      .imageChat {
         .hover {
           top: 0;
           visibility: visible;
         }
       }
-      .textOccasion {
+      .textChat {
         background-color: $gray-dark;
         transition-duration: 0.8s;
         color: #fff;
@@ -35,7 +35,7 @@
     @media (max-width: $screen-md-min) {
       width: 85%;
     }
-    .imageOccasion {
+    .imageChat {
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -64,7 +64,7 @@
         }
       }
     }
-    .textOccasion {
+    .textChat {
       padding: 10px 10px 10px 10px;
       height: 80px;
       background-color: #fff;
@@ -81,7 +81,7 @@
         margin: 0;
         color: $gray-dark;
       }
-      .occasionPrix {
+      .chatPrix {
         position: absolute;
         bottom: 0;
         right: 0;
@@ -90,7 +90,7 @@
         font-weight: 600;
         color: $primary-color;
       }
-      .occasionInfos {
+      .chatInfos {
         padding: 0;
         h3 {
           font-weight: 600;
@@ -105,10 +105,11 @@
   }
 }
 
-.occasionSingle {
+.chatSingle {
   margin-top: 75px;
   margin-bottom: 75px;
   text-align: center;
+  background-color: #eee;
   .colSingle {
     margin-top: 25px;
     .carousel {
@@ -125,7 +126,7 @@
         }
       }
     }
-    &.textOccasion {
+    &.textChat {
       text-align: left;
       .divPrice {
         text-align: right;

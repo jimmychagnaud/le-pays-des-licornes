@@ -47,11 +47,18 @@
   background-color: $primary-color;
   color: $gray-dark;
   .site-info {
-    height: 25px;
+    height: 100%;
     p {
+      color: $secondary-color;
       margin: 0;
       display: inline;
       vertical-align: -webkit-baseline-middle;
+      a {
+        color: $secondary-color;
+        &:hover {
+          color: darken($secondary-color, 6);
+        }
+      }
     }
   }
 }

@@ -18,7 +18,7 @@
             padding-left: 25px;
           }
           padding: 0;
-          margin-top: 10px;
+          height: 70px;
           img {
             height: 100%;
           }
@@ -76,9 +76,9 @@ body {
     color: $primary-color;
   }
   a {
-    color: $gray-dark;
+    color: $secondary-color;
     &:hover {
-      color: $primary-color;
+      color: darken($secondary-color, 6);
     }
   }
 }

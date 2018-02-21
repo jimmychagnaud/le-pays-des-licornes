@@ -112,7 +112,6 @@ add_action('init', 'create_post_block');
 
 register_nav_menus(array(
   'Top'    => 'Navigation principale',
-  'bottom' => 'Liens bas de page',
 ));
 
 add_filter('get_sample_permalink_html', 'hide_permalinks', 10, 5);

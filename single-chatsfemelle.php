@@ -2,7 +2,6 @@
 /**
  * @package Le pays des licornes
  * @since Le pays des licornes 1.0
- * Template Name: Single-chat
  */
 get_header();?>
 <div class="container chatSingle">
@@ -14,8 +13,8 @@ get_header();?>
 						$prix = get_field('prixChat');
 						$age = get_field('ageChat');
 						$couleur = get_field('couleurChat');
-						$sexe = get_field('sexeChat');
-						$race = get_field('raceChat');
+						$status = get_field('status_chats');
+						$titres = get_field('titres_recompenses_chats');
 		?>
 		<h1><?php echo the_title();?></h1>
 		<div class="col-md-6 col-xs-12 colSingle">
@@ -53,13 +52,14 @@ get_header();?>
 		<div class="col-md-6 col-xs-12 colSingle textChat">
 			<div class="row">
 				<div class="col-md-6 col-xs-6">
-					<p>Age: <?php echo $age ;?> mois</p>
+					<p>Age: <?php echo $age ;?></p>
 					<p>Couleur: <?php echo $couleur ;?></p>
-					<p>Sexe: <?php echo $sexe ;?></p>
-					<p>Race: <?php echo $race ;?></p>
+					<p>Status: <?php echo $status ;?></p>
 				</div>
 				<div class="col-md-6 col-xs-6 divPrice">
-					<p class="price" ><?php echo $prix ;?><span> €</span></p>
+					<?php if ($prix != 0){ 
+							echo ('<p class="price" >'.$prix.'<span> €</span></p>');
+						};?>
 					<a href="/contact" class="btn btn-primary">Me contacter</a><br>
 					<a href="/contact" class="phoneNumber"><span class="glyphicon glyphicon-earphone"></span> -------------- </a>
 				</div>
@@ -67,6 +67,7 @@ get_header();?>
 			<div class="row">
 				<div class="col-md-12" style="margin-top: 25px;">
 					<p><?php echo $chatTexte ;?></p>
+					<p>Ces titres: <?php echo $titres ;?></p>
 				</div>
 			</div>
 		</div>

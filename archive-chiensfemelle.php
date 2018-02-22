@@ -2,14 +2,13 @@
 /**
  * @package Le pays des licornes
  * @since Le pays des licornes 1.0
- * Template Name: Chiens
  */
 get_header();
 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 $chiens= new WP_Query(array(
-    'post_type'=>'chiens',
+    'post_type'=>'chiensfemelle',
     'posts_per_page' => 12,
     'paged' => $paged,
 ));
@@ -17,7 +16,7 @@ $chiens= new WP_Query(array(
 <div class="header" style="background-image: url('<?php echo get_template_directory_uri() ?>/img/bg2.jpg');"></div>
 <div class="container chienArchive">
 	<div class="row">
-		<h1>Tous mes chiens</h1>
+		<h1>Tous mes chiens femelle</h1>
 		<?php while ($chiens->have_posts()) {
 					 	$chiens->the_post();
 						$chienImage = get_field('imageChien');
@@ -26,8 +25,8 @@ $chiens= new WP_Query(array(
 						$prix = get_field('prixChien');
 						$age = get_field('ageChien');
 						$couleur = get_field('couleurChien');
-						$sexe = get_field('sexeChien');
-						$race = get_field('raceChien');
+						$status = get_field('status_chiens');
+						$titres = get_field('titres_recompenses_chiens');
 		?>
 		<div class="col-md-3 col-xs-12 colArchiveChien">
 			<a href="<?php the_permalink() ?>">
@@ -40,11 +39,13 @@ $chiens= new WP_Query(array(
 				<div class="textChien">
 					<div class="col-md-6 chienInfos">
 						<h3><?php the_title();?></h3>
-						<p><?php echo $age;?> mois</p>
-						<p><?php echo $sexe;?></p>
+						<p><?php echo $age;?></p>
+						<p><?php echo $status;?></p>
 					</div>
 					<div class="col-md-6 chienPrix">
-						<p><?php echo $prix;?><span style="font-size: .6em;"> €</span></p>
+						<?php if ($prix != 0){ 
+							echo ('<p>'.$prix.'<span style="font-size: .6em;"> €</span></p>');
+						};?>
 					</div>
 				</div>
 			</a>

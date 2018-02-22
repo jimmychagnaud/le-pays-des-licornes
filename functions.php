@@ -31,22 +31,22 @@ function my_acf_init()
 }
 add_action('acf/init', 'my_acf_init');
 
-function create_post_chiens()
+function create_post_chiens_male()
 {
-  register_post_type('Chiens', [
+  register_post_type('Chiensmale', [
     'labels'            => [
-      'name'          => __('Chiens'),
-      'singular_name' => __('Chiens'),
-      'add_new_item'  => ('Ajouter un nouveau chien'),
-      'edit_item'     => __('Modifier un chien'),
-      'search_item'   => __('Rechercher un chien'),
-      'all_items'     => __('Tout les chiens'),
-      'view_items'    => __('Voir les chiens'),
-      'view_item'     => __('Voir le chien'),
+      'name'          => __('Chiens male'),
+      'singular_name' => __('Chiens male'),
+      'add_new_item'  => ('Ajouter un nouveau chien male'),
+      'edit_item'     => __('Modifier un chien male'),
+      'search_item'   => __('Rechercher un chien male'),
+      'all_items'     => __('Tout les chiens male'),
+      'view_items'    => __('Voir les chiens male'),
+      'view_item'     => __('Voir le chien male'),
     ],
     'public'            => true,
     'has_archive'       => true,
-    'rewrite'           => ['slug' => 'chiens'],
+    'rewrite'           => ['slug' => 'chiens male'],
     'capability_type'   => 'page',
     'menu_icon'         => 'dashicons-plus',
     'supports'          => ['title', 'thumbnail'],
@@ -54,24 +54,24 @@ function create_post_chiens()
     'show_in_nav_menus' => true,
   ]);
 }
-add_action('init', 'create_post_chiens');
+add_action('init', 'create_post_chiens_male');
 
-function create_post_chats()
+function create_post_chiens_femelle()
 {
-  register_post_type('Chats', [
+  register_post_type('Chiensfemelle', [
     'labels'            => [
-      'name'          => __('Chats'),
-      'singular_name' => __('Chats'),
-      'add_new_item'  => ('Ajouter un nouveau chat'),
-      'edit_item'     => __('Modifier un chat'),
-      'search_item'   => __('Rechercher un chat'),
-      'all_items'     => __('Tout les chats'),
-      'view_items'    => __('Voir les chats'),
-      'view_item'     => __('Voir le chat'),
+      'name'          => __('Chiens femelle'),
+      'singular_name' => __('Chiens femelle'),
+      'add_new_item'  => ('Ajouter un nouveau chien femelle'),
+      'edit_item'     => __('Modifier un chien femelle'),
+      'search_item'   => __('Rechercher un chien femelle'),
+      'all_items'     => __('Tout les chiens femelle'),
+      'view_items'    => __('Voir les chiens femelle'),
+      'view_item'     => __('Voir le chien femelle'),
     ],
     'public'            => true,
     'has_archive'       => true,
-    'rewrite'           => ['slug' => 'chats'],
+    'rewrite'           => ['slug' => 'chiens femelle'],
     'capability_type'   => 'page',
     'menu_icon'         => 'dashicons-plus',
     'supports'          => ['title', 'thumbnail'],
@@ -79,7 +79,107 @@ function create_post_chats()
     'show_in_nav_menus' => true,
   ]);
 }
-add_action('init', 'create_post_chats');
+add_action('init', 'create_post_chiens_femelle');
+
+function create_post_chiens_bebe()
+{
+  register_post_type('Bebechiens', [
+    'labels'            => [
+      'name'          => __('Bebe chiens'),
+      'singular_name' => __('Bebe chiens'),
+      'add_new_item'  => ('Ajouter un nouveau bebe chiens'),
+      'edit_item'     => __('Modifier un bebe chiens'),
+      'search_item'   => __('Rechercher un bebe chiens'),
+      'all_items'     => __('Tout les bebe chiens'),
+      'view_items'    => __('Voir les bebe chiens'),
+      'view_item'     => __('Voir le bebe chiens'),
+    ],
+    'public'            => true,
+    'has_archive'       => true,
+    'rewrite'           => ['slug' => 'bebe chiens'],
+    'capability_type'   => 'page',
+    'menu_icon'         => 'dashicons-plus',
+    'supports'          => ['title', 'thumbnail'],
+    'show_in_menu'      => true,
+    'show_in_nav_menus' => true,
+  ]);
+}
+add_action('init', 'create_post_chiens_bebe');
+
+function create_post_chats_male()
+{
+  register_post_type('Chatsmale', [
+    'labels'            => [
+      'name'          => __('Chats male'),
+      'singular_name' => __('Chats male'),
+      'add_new_item'  => ('Ajouter un nouveau chat male'),
+      'edit_item'     => __('Modifier un chat male'),
+      'search_item'   => __('Rechercher un chat male'),
+      'all_items'     => __('Tout les chats male'),
+      'view_items'    => __('Voir les chats male'),
+      'view_item'     => __('Voir le chat male'),
+    ],
+    'public'            => true,
+    'has_archive'       => true,
+    'rewrite'           => ['slug' => 'chats male'],
+    'capability_type'   => 'page',
+    'menu_icon'         => 'dashicons-plus',
+    'supports'          => ['title', 'thumbnail'],
+    'show_in_menu'      => true,
+    'show_in_nav_menus' => true,
+  ]);
+}
+add_action('init', 'create_post_chats_male');
+
+function create_post_chats_femelle()
+{
+  register_post_type('Chatsfemelle', [
+    'labels'            => [
+      'name'          => __('Chats femelle'),
+      'singular_name' => __('Chats femelle'),
+      'add_new_item'  => ('Ajouter un nouveau chat femelle'),
+      'edit_item'     => __('Modifier un chat femelle'),
+      'search_item'   => __('Rechercher un chat femelle'),
+      'all_items'     => __('Tout les chats femelle'),
+      'view_items'    => __('Voir les chats femelle'),
+      'view_item'     => __('Voir le chat femelle'),
+    ],
+    'public'            => true,
+    'has_archive'       => true,
+    'rewrite'           => ['slug' => 'chats femelle'],
+    'capability_type'   => 'page',
+    'menu_icon'         => 'dashicons-plus',
+    'supports'          => ['title', 'thumbnail'],
+    'show_in_menu'      => true,
+    'show_in_nav_menus' => true,
+  ]);
+}
+add_action('init', 'create_post_chats_femelle');
+
+function create_post_bebe_chats()
+{
+  register_post_type('bebechats', [
+    'labels'            => [
+      'name'          => __('bebe chats'),
+      'singular_name' => __('bebe chats'),
+      'add_new_item'  => ('Ajouter un nouveau bebe chats'),
+      'edit_item'     => __('Modifier un bebe chats'),
+      'search_item'   => __('Rechercher un bebe chats'),
+      'all_items'     => __('Tout les bebe chats'),
+      'view_items'    => __('Voir les bebe chats'),
+      'view_item'     => __('Voir le bebe chats'),
+    ],
+    'public'            => true,
+    'has_archive'       => true,
+    'rewrite'           => ['slug' => 'bebe chats'],
+    'capability_type'   => 'page',
+    'menu_icon'         => 'dashicons-plus',
+    'supports'          => ['title', 'thumbnail'],
+    'show_in_menu'      => true,
+    'show_in_nav_menus' => true,
+  ]);
+}
+add_action('init', 'create_post_bebe_chats');
 
 function create_post_block()
 {

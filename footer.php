@@ -1,7 +1,7 @@
 <?php
 /**
- * @package Le pays des licornes
- * @since Le pays des licornes 1.0
+ * @package Le royaume des licornes
+ * @since Le royaume des licornes 1.0
  */
   $args = ['post_type' => 'block'];
   $loop = new WP_Query($args);
@@ -37,8 +37,8 @@
 				</div>
 				<div class="col-md-4">
 					<h2>Suivez moi</h2>
-					<a href="https://www.facebook.com/autelisfrance/">
-						<img class="bottomIcon" src="<?php echo get_template_directory_uri() ?>/img/facebook.svg" alt="facebook autelis">
+					<a href="https://www.facebook.com/royaumedeslicornes/">
+						<img class="bottomIcon" src="<?php echo get_template_directory_uri() ?>/img/facebook.svg" alt="facebook le royaume des licornes">
 					</a>
 				</div>
 			</div>

@@ -28,7 +28,7 @@
 			        <span class="icon-bar"></span>
 			      </button>
 			      <a class="navbar-brand" href="/">
-			        <img alt="Brand" src="<?php echo get_template_directory_uri() ?>/img/logocircle.png">
+			        <img alt="Brand" src="<?php echo get_template_directory_uri() ?>/img/logocircle2.png">
 			      </a>
 			    </div>
 			    <div class="collapse navbar-collapse" id="navbar-collapse-top">

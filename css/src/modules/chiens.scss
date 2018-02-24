@@ -77,6 +77,8 @@
       position: absolute;
       left: 0;
       right: 0;
+      font-size: 17px;
+      font-weight: 600;
       h3 {
         margin: 0;
         color: $gray-dark;
@@ -92,9 +94,6 @@
       }
       .chienInfos {
         padding: 0;
-        h3 {
-          font-weight: 600;
-        }
         p {
           font-size: 13px;
           margin: 0;
@@ -110,6 +109,9 @@
   margin-bottom: 75px;
   text-align: center;
   background-color: #eee;
+  .row {
+    margin-bottom: 45px;
+  }
   .colSingle {
     margin-top: 25px;
     .carousel {

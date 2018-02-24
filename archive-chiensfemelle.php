@@ -37,16 +37,22 @@ $chiens= new WP_Query(array(
 					</div>
 				</div>
 				<div class="textChien">
-					<div class="col-md-6 chienInfos">
-						<h3><?php the_title();?></h3>
-						<p><?php echo $age;?></p>
-						<p><?php echo $status;?></p>
-					</div>
-					<div class="col-md-6 chienPrix">
-						<?php if ($prix != 0){ 
-							echo ('<p>'.$prix.'<span style="font-size: .6em;"> €</span></p>');
-						};?>
-					</div>
+					<?php if ($prix != 0){ 
+						echo '<div class="col-md-6 chienInfos">
+							<h3>'.the_title().'</h3>
+							<p>'.$age.'</p>
+							<p>'.$status.'</p>
+						</div>';
+						echo ('<div class="col-md-6 chienPrix"><p>'.$prix.'<span style="font-size: .6em;"> €</span></p></div>');
+					} else {
+						echo '<div class="chienInfosTitle">
+								<h3>'.the_title().'</h3>
+							</div>
+							<div class="chienInfos">
+								<p>'.$age.'</p>
+								<p>'.$status.'</p>
+							</div>';
+					};?>
 				</div>
 			</a>
 		</div>

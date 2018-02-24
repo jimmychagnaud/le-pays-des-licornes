@@ -37,16 +37,22 @@ $Chats= new WP_Query(array(
 					</div>
 				</div>
 				<div class="textChat">
-					<div class="col-md-6 chatInfos">
-						<h3><?php the_title();?></h3>
-						<p><?php echo $age;?></p>
-						<p><?php echo $status;?></p>
-					</div>
-					<div class="col-md-6 chatPrix">
-						<?php if ($prix != 0){ 
-							echo ('<p>'.$prix.'<span style="font-size: .6em;"> €</span></p>');
-						};?>
-					</div>
+					<?php if ($prix != 0){ 
+						echo '<div class="col-md-6 chatInfos">
+							<h3>'.the_title().'</h3>
+							<p>'.$age.'</p>
+							<p>'.$status.'</p>
+						</div>';
+						echo ('<div class="col-md-6 chatPrix"><p>'.$prix.'<span style="font-size: .6em;"> €</span></p></div>');
+					} else {
+						echo '<div class="chatInfosTitle">
+								<h3>'.the_title().'</h3>
+							</div>
+							<div class="chatInfos">
+								<p>'.$age.'</p>
+								<p>'.$status.'</p>
+							</div>';
+					};?>
 				</div>
 			</a>
 		</div>

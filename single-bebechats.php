@@ -61,7 +61,7 @@ get_header();?>
 							echo ('<p class="price" >'.$prix.'<span> €</span></p>');
 						};?>
 					<a href="/contact" class="btn btn-primary">Me contacter</a><br>
-					<a href="/contact" class="phoneNumber"><span class="glyphicon glyphicon-earphone"></span> -------------- </a>
+					<a href="/contact" class="phoneNumber"><span class="glyphicon glyphicon-earphone"></span> 06 78 92 16 94 </a>
 				</div>
 			</div>
 			<div class="row">

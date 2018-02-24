@@ -72,8 +72,8 @@ get_header();?>
 			</div>
 		</div>
 	</div>
-		<?php };
-		wp_reset_query();
-		?>
+	<?php };
+	wp_reset_query();
+	?>
 </div>
 <?php get_footer();?>

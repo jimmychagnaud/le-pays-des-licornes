@@ -23,10 +23,9 @@
       .textChat {
         background-color: $gray-dark;
         transition-duration: 0.8s;
-        color: #fff;
-        h3 {
-          color: $primary-color;
-          white-space: normal !important;
+        color: $primary-color;
+        .chatInfos p {
+          color: #fff !important;
         }
       }
     }
@@ -69,7 +68,7 @@
       padding: 10px 10px 10px 10px;
       height: 80px;
       background-color: #fff;
-      color: $gray;
+      color: $gray-dark;
       text-align: left;
       white-space: nowrap;
       overflow: hidden;
@@ -96,6 +95,7 @@
       .chatInfos {
         padding: 0;
         p {
+          color: $gray;
           font-size: 13px;
           margin: 0;
           font-weight: 600;

@@ -52,7 +52,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<div class="container text-center">
-				<p>© Le royaume des licornes -Tous droits réservés -<a href="/mentions-legales"> Mentions légales</a></p>
+				<p>© Le royaume des licornes -Tous droits réservés -<a href="/mentions-legales"> Mentions légales - </a><a href="http://creationsitespau.fr">Site developpé par M. Jimmy Chagnaud</a></p>
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer -->

@@ -63,13 +63,14 @@
 
 @font-face {
   font-family: 'HelveticaNeue-Thin';
-  src: url(fonts/HelveticaNeue-Thin.otf);
+  src: url(fonts/ARDECODE.ttf);
 }
 
 body {
   color: $gray-dark;
   height: auto !important;
   h1 {
+    font-size: 50px;
     font-family: 'HelveticaNeue-Thin';
   }
   h2 {
